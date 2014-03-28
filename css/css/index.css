@@ -1,0 +1,99 @@
+#map-canvas {
+  height: 100%;
+  position: absolute; 
+  top: 0; 
+  bottom: -200px; 
+  left: 0; 
+  right: 0; 
+  z-index: 0;
+}
+ 
+#container {
+  z-index: 100;
+  position: relative;
+}
+#port{
+ background-color: gray;
+ margin: 5px;
+ border-radius:12px;
+ text-align:center;
+ vertical-align:middle;
+ height:100px;
+
+}
+
+#talent{
+background-color: #99CCFF;
+ margin: 5px;
+ border-radius:12px;
+ text-align:center;
+ vertical-align:middle;
+ height:100px;
+   
+}
+#title{
+ background-color: #99CCFF;
+ margin: 5px;
+ border-radius:12px;
+    text-align:center
+}
+
+#serviceSelections{
+ position:fixed;
+    top: 40%;
+    left: 25%;
+    width:50%;
+}
+
+#close {
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+    background:#ccc;
+}
+
+h2 {text-shadow:5px 5px 10px gray;
+}
+h3 {text-shadow:5px 5px 10px #99CCFF;
+}
+#image{
+ background-color: gray;
+ margin: 5px;
+ border-radius:12px;
+ text-align:center;
+ vertical-align:middle;
+ height:100px;
+
+}
+thumbnail{
+position: relative;
+z-index: 2;
+}
+
+.thumbnail:hover{
+background-color: transparent;
+z-index: 50;
+}
+
+.thumbnail span{ /*CSS for enlarged image*/
+position: absolute;
+background-color: lightyellow;
+padding: 5px;
+left: -1000px;
+border: 1px dashed gray;
+visibility: hidden;
+color: black;
+text-decoration: none;
+ }
+
+.thumbnail span img{ /*CSS for enlarged image*/
+border-width: 0;
+padding: 2px;
+}
+
+.thumbnail:hover span{ /*CSS for enlarged image on hover*/
+visibility: visible;
+top: 0;
+left: 60px; /*position where enlarged image should offset horizontally */
+
+}

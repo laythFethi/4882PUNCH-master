@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+ 		<title>Rating   </title>
+	 
+    </head>
+ 
+	<body>
+          <!--
+          // need to fix the mouse out part . after i click a vote it remove the image after i click it 
+            mouse on should hide everything else. 
+          --> 
+          
+    <div id="rating">
+            <form name="rating" method="post" >
+                <p>
+                    
+                
+           
+                  <img src="images/rate0.gif" id="rate_1" alt="1 Star"  onmouseover="bigImg(this);"  onclick="show(1);" />
+                  <img src="images/rate0.gif" id="rate_2" alt="2 Stars" onmouseover="bigImg(this);"  onclick="show(2);" />
+                  <img src="images/rate0.gif" id="rate_3" alt="3 Stars" onmouseover="bigImg(this);"  onclick="show(3);" />
+                  <img src="images/rate0.gif" id="rate_4" alt="4 Stars" onmouseover="bigImg(this);"  onclick="show(4);" />
+                  <img src="images/rate0.gif" id="rate_5" alt="5 Stars" onmouseover="bigImg(this);"  onclick="show(5);" />
+                
+                </p>
+           <!--
+            onmouseout="normalImg(this);
+           -->
+          
+           </form>
+    </div>
+    
+ <script> 
+    function show(x) { 
+             if(x===1&&(document.getElementById('rate1D').style.display==='none'))
+             { 
+              document.getElementById('rate1D').style.display='block'; 
+              document.getElementById('rate2D').style.display='none'; 
+              document.getElementById('rate3D').style.display='none'; 
+              document.getElementById('rate4D').style.display='none'; 
+              document.getElementById('rate5D').style.display='none'; 
+
+             }
+            else if(x===2&&(document.getElementById('rate2D').style.display==='none'))
+             {
+              document.getElementById('rate2D').style.display='block'; 
+              document.getElementById('rate1D').style.display='none'; 
+              document.getElementById('rate3D').style.display='none'; 
+              document.getElementById('rate4D').style.display='none'; 
+              document.getElementById('rate5D').style.display='none'; 
+            }
+            else if(x===3&&(document.getElementById('rate3D').style.display==='none') )
+            {
+               
+             
+              document.getElementById('rate1D').style.display='none'; 
+              document.getElementById('rate2D').style.display='none'; 
+              document.getElementById('rate3D').style.display='block'; 
+              document.getElementById('rate4D').style.display='none'; 
+              document.getElementById('rate5D').style.display='none'; 
+            }
+            else if(x===4&&(document.getElementById('rate4D').style.display==='none'))
+            {
+              
+                
+              document.getElementById('rate1D').style.display='none'; 
+              document.getElementById('rate3D').style.display='none'; 
+              document.getElementById('rate2D').style.display='none'; 
+              document.getElementById('rate4D').style.display='block';
+              document.getElementById('rate5D').style.display='none'; 
+            }
+            else  
+                
+            { 
+                if(  document.getElementById('rate5D').style.display==='none' && 
+                  (  document.getElementById('rate1D').style.display==='block'||
+                     document.getElementById('rate2D').style.display==='block'||
+                     document.getElementById('rate3D').style.display==='block'||
+                     document.getElementById('rate4D').style.display==='block'  ) && x!==1 )
+                 {
+                document.getElementById('rate1D').style.display='none'; 
+                document.getElementById('rate3D').style.display='none'; 
+                document.getElementById('rate2D').style.display='none'; 
+                document.getElementById('rate4D').style.display='none';
+                document.getElementById('rate5D').style.display='block'; 
+            }
+        }
+             
+     } 
+    function bigImg(x)
+    {
+       
+    //x.style.height="64px";
+    //x.style.width="64px";
+    //x.src="images/rate1.gif";
+     
+        if(x===rate_1)
+        {
+         rate_1.src="images/rate1.gif";
+         rate_2.src="images/rate0.gif";
+         rate_3.src="images/rate0.gif";
+         rate_4.src="images/rate0.gif";
+         rate_5.src="images/rate0.gif";
+
+        }
+          if(x===rate_2)
+        {
+         rate_1.src="images/rate1.gif";
+         rate_2.src="images/rate1.gif";
+         rate_3.src="images/rate0.gif";
+         rate_4.src="images/rate0.gif";
+         rate_5.src="images/rate0.gif";
+
+        }
+          if(x===rate_3)
+        {
+         rate_1.src="images/rate1.gif";
+         rate_2.src="images/rate1.gif";
+         rate_3.src="images/rate1.gif";
+         rate_4.src="images/rate0.gif";
+         rate_5.src="images/rate0.gif";
+
+        }
+          if(x===rate_4)
+        {
+         rate_1.src="images/rate1.gif";
+         rate_2.src="images/rate1.gif";
+         rate_3.src="images/rate1.gif";
+         rate_4.src="images/rate1.gif";
+         rate_5.src="images/rate0.gif";
+
+        }
+          if(x===rate_5)
+        {
+         rate_1.src="images/rate1.gif";
+         rate_2.src="images/rate1.gif";
+         rate_3.src="images/rate1.gif";
+         rate_4.src="images/rate1.gif";
+         rate_5.src="images/rate1.gif";
+
+        }
+  
+ 
+    //document.getElementById("rate"+x).src="images/rate1.gif";
+    }
+
+    function normalImg(x)
+    {
+    x.src="images/rate0.gif";
+    x.style.height="25px";
+    x.style.width="25px";
+    }
+</script> 
+
+
+ <!--<div id="opener"><a href="#1" name="1" onclick="return show(1);">click here(show)</a></div> 
+  <div id="upbutton"><a onclick="return hide();"> click here(hide)</a></div> 
+     
+ <textarea rows="4" cols="50" >
+ </textarea>
+
+ -->
+ <div id="rate1D" style="display:none;"> <p>Choose rate 1 !  </p> </div>
+ <div id="rate2D" style="display:none;"> <p>Choose rate 2 !  </p> </div>
+ <div id="rate3D" style="display:none;"> <p>Choose rate 3 !  </p> </div>
+ <div id="rate4D" style="display:none;"> <p>Choose rate 4 !  </p> </div>
+ <div id="rate5D" style="display:none;"> <p>Choose rate 5 !  </p> </div>
+
+ <div>
+    
+     
+ <textarea rows="4" cols="50" id="myTextarea">
+write comments here . 
+        </textarea>
+     
+ </div>
+ <div>
+     <input type="submit" value="summit" onclick="check();" />
+     
+ </div>
+ <script> // need php really to create method that check and send results to DataBase
+     function check()
+     {
+         
+     }
+     var w = document.getElementById("myTextarea").value;
+  </script>
+	</body>
+</html>
